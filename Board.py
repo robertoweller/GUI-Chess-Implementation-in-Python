@@ -148,12 +148,12 @@ class Scatter_Text_widget(Screen):
                     #If the piece being promoted is White
 
                     '''
-                    Adds four buttons the user can touch, symbolizing what piece the user will want to promote to '''
+                    Adiciona quatro botões que o usuário pode tocar, simbolizando qual peça o usuário desejará promover para '''
 
-                    content = Button(id = 'Queen Promotion', background_normal='Pictures\White_Queen.png', size = (60,60), pos = (410,300))
-                    content1 = Button(id = 'Rook Promotion', background_normal='Pictures\white_rook.png', size = (60,60), pos = (307.5,400))
-                    content2 = Button(id = 'Bishop Promotion', background_normal='Pictures\white_Bishop.png', size = (60,60), pos = (307.5,300))
-                    content3 = Button(id = 'Knight Promotion',  background_normal='Pictures\white_horse.png', size = (60,60), pos = (410,400))
+                    content = Button(id = 'Queen Promotion', background_normal='Pictures/White_Queen.png', size = (60,60), pos = (410,300))
+                    content1 = Button(id = 'Rook Promotion', background_normal='Pictures/white_rook.png', size = (60,60), pos = (307.5,400))
+                    content2 = Button(id = 'Bishop Promotion', background_normal='Pictures/white_Bishop.png', size = (60,60), pos = (307.5,300))
+                    content3 = Button(id = 'Knight Promotion',  background_normal='Pictures/white_horse.png', size = (60,60), pos = (410,400))
 
                 else:
                     #If the piece is Black
