@@ -637,3 +637,669 @@
 
         #This is a long way to define all of the pieces, but since all of the pieces
         #have different IDs, positions, and Images, I believe that this is the only way to do it
+#:import tela tela
+# File name: Board.py
+
+#######################################################################################################
+############This code is in the Kivy Language (Kvlang), and each widget is defined manually############
+#######################################################################################################
+
+<Scatter_Text_widget>
+    #This allows the app to display the image of a chessboard as a background
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Pictures/chessboard.png'
+
+    FloatLayout:
+        #THIS CODE IS ONLy FOR A PAWN PROMOTION
+        Scatter:
+            id: Whire Queen
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,10000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/White_Queen.png'
+                size: 100,100
+
+        Scatter:
+            id: Ledt White Rook
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,1000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_rook.png'
+                size: 100,100
+
+        Scatter:
+            id: Ledt White Knight
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,10000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_horse.png'
+                size: 100,100
+
+        Scatter:
+            id: Ledt White Bishop
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,10000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_Bishop.png'
+                size: 100,100
+
+        Scatter:
+            id: Block Queen
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,10000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_Queen.png'
+                size: 100,100
+
+        Scatter:
+            id: Ledt Black Rook
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,1000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_rook.png'
+                size: 100,100
+
+        Scatter:
+            id: Ledt Black Knight
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,10000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_horse.png'
+                size: 100,100
+
+        Scatter:
+            id: Ledt Black Bishop
+            size_hint: None, None
+            size: 100,100
+            pos: 1000,10000
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_Bishop.png'
+                size: 100,100
+
+        ###############
+        #ESTE CÓDIGO É PARA TODAS AS PEÇAS NORMAIS DO JOGO
+        ###############
+
+        Scatter:
+            x: 2
+            id: Left White Rook
+            size_hint: None, None
+            size: 100.0/tela.tam(),100.0/tela.tam()
+            pos: 0,0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_rook.png'
+                size: 100.0/tela.tam(), 100.0/tela.tam()
+
+        Scatter:
+            id: Right White Rook
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 717.5/tela.tam(),0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_rook.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+#
+        Scatter:
+            id: Left White Knight
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 102.5/tela.tam(),0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_horse.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Right White Knight
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 615/tela.tam(),0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                        source: 'Pictures/white_horse.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Left White Bishop
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 205/tela.tam(),0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_Bishop.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Right White Bishop
+            size_hint: None, None
+            pos: 512.5/tela.tam(),0
+            size: 100/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_Bishop.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+
+        Scatter:
+            id: White King
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 410/tela.tam(),0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_king.png'
+                size: 100/tela.tam(),100/tela.tam()
+###
+        Scatter:
+            id: White Queen
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 307.5/tela.tam(),0
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/White_Queen.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+            ###Creates all of the White Pawns. Criando pioens
+        Scatter:
+            id: White Pawn1
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 0,100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+###
+        Scatter:
+            id: White Pawn2
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 102.5/tela.tam(),100/tela.tam()
+            
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: White Pawn3
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 205/tela.tam(),100/tela.tam()
+
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: White Pawn4
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 307.5/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: White Pawn5
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 410/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: White Pawn6
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 512.5/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: White Pawn7
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 615/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+###
+
+        Scatter:
+            id: White Pawn8
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 717.5/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/white_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+            #######################################
+            ########MOVED ONTO BLACK PIECES########
+            ######################################
+        Scatter:
+            id: Left Black Rook
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 0,700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_rook.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+
+        Scatter:
+            id: Right Black Rook
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 717.5/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_rook.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Left Black Knight
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 102.5/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_horse.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: Right Black Knight
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos:615/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_horse.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Left Black Bishop
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 205/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_Bishop.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: Right Black Bishop
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 512.5/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_Bishop.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Black King
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 410/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_king.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: Black Queen
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 307.5/tela.tam(),700/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_Queen.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+
+            ###Creates all of the Black Pawns. Cria os pioes pretos.
+        Scatter:
+            id: Black Pawn1
+            size_hint: None, None
+            pos: 0,600/tela.tam()
+            size: 100/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+
+        Scatter:
+            id: Black Pawn2
+            size_hint: None, None
+            size: 100,100
+
+            pos: 102.5/tela.tam(),600/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Black Pawn3
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 205/tela.tam(),600/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: Black Pawn4
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 307.5/tela.tam(),600/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Black Pawn5
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 410/tela.tam(),600/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Black Pawn6
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 512.5/tela.tam(),600/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+###
+
+        Scatter:
+            id: Black Pawn7
+            size_hint: None, None
+            pos: 615/tela.tam(),600/tela.tam()
+            size: 100/tela.tam(),100/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+        Scatter:
+            id: Black Pawn8
+            size_hint: None, None
+            size: 100/tela.tam(),100/tela.tam()
+            pos: 717.5/tela.tam(),600/tela.tam()
+
+            Label:
+
+                canvas.before:
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                        source: 'Pictures/black_pawn.png'
+                size: 100/tela.tam(),100/tela.tam()
+
+	#Esse é um longo caminho para definir todas as peças, mas como todas elas
+	#tem IDs, posições e imagens diferentes, acredito que essa é a única maneira de fazer isso
+        #This is a long way to define all of the pieces, but since all of the pieces
+        #have different IDs, positions, and Images, I believe that this is the only way to do it
+        
