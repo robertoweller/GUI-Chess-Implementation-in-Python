@@ -1,5 +1,6 @@
 from Board import window
 from kivy.config import Config
+# Dando erro nessa biblioteca do kivy
 #from kivy.core.window import Window
 
 
