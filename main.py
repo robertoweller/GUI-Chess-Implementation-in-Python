@@ -1,23 +1,24 @@
 from Board import window
 from kivy.config import Config
-from kivy.core.window import Window
-
+#from kivy.core.window import Window
+import Data_Conversion.tela
 
 def setup():
-    #Set the Height and Width of the Board
-    width_of_board = 820
-    height_of_board = 800
+    #Set the Height and Width of the Board, tela grande 820, 800: tela média 656, 640 e piquena 410, 400.
+    
+    width_of_board = 656
+    height_of_board = 640
 
-    #Set the Hight and Width of the App
+    # Set the Hight and Width of the App
     Config.set('graphics', 'width', str(width_of_board))
     Config.set('graphics', 'height', str(height_of_board))
 
-    #Make the App non-resizable
+    #Tornar o aplicativo não redimensionável
     Config.set('graphics', 'resizable', '0')
     Config.write()
 
-    #Make the top Windows bar go away
-    Window.borderless = True
+    #Faça a barra superior do Windows desaparecer
+#    Window.borderless = True
 
     #Disable the Multi-Touch
     Config.set('input', 'mouse', 'mouse,disable_multitouch')
