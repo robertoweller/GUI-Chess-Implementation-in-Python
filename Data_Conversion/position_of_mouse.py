@@ -5,134 +5,139 @@ and the time it took to code
 
 IF YOU DON'T KNOW THE CHESS POSITIONS: http://www.chess-poster.com/english/learn_chess/notation/images/coordinates_2.gif
 '''
+import Data_Conversion.tela
 
-class find_position():
+# Facilitar o movimento das peças
+x = Data_Conversion.tela.tam()
+
+class find_position:
+
     def chess_position(self, pos):
-        if pos[0] <= 102.5 and pos[1] <= 100:
+        if pos[0] <= 102.5/x and pos[1] <= 100/x:
             return "a1"
-        elif pos[0] <= 205 and pos[1] <= 100:
+        elif pos[0] <= 205/x and pos[1] <= 100/x:
             return "b1"
-        elif pos[0] <= 307.5 and pos[1] <= 100:
+        elif pos[0] <= 307.5/x and pos[1] <= 100/x:
             return "c1"
-        elif pos[0] <= 410 and pos[1] <= 100:
+        elif pos[0] <= 410/x and pos[1] <= 100/x:
             return "d1"
-        elif pos[0] <= 512.5 and pos[1] <= 100:
+        elif pos[0] <= 512.5/x and pos[1] <= 100/x:
             return "e1"
-        elif pos[0] <= 615 and pos[1] <= 100:
+        elif pos[0] <= 615/x and pos[1] <= 100/x:
             return "f1"
-        elif pos[0] <= 717.5 and pos[1] <= 100:
+        elif pos[0] <= 717.5/x and pos[1] <= 100/x:
             return "g1"
-        elif pos[0] <= 820 and pos[1] <= 100:
+        elif pos[0] <= 820/x and pos[1] <= 100/x:
             return "h1"
-        elif pos[0] <= 102.5 and pos[1] <= 200:
-            return("a2")
-        elif pos[0] <= 205 and pos[1] <= 200:
-            return("b2")
-        elif pos[0] <= 307.5 and pos[1] <= 200:
-            return("c2")
-        elif pos[0] <= 410 and pos[1] <= 200:
-            return("d2")
-        elif pos[0] <= 512.5 and pos[1] <= 200:
-            return("e2")
-        elif pos[0] <= 615 and pos[1] <= 200:
-            return("f2")
-        elif pos[0] <= 717.5 and pos[1] <= 200:
-            return("g2")
-        elif pos[0] <= 820 and pos[1] <= 200:
-            return("h2")
-        elif pos[0] <= 102.5 and pos[1] <= 300:
-            return("a3")
-        elif pos[0] <= 205 and pos[1] <= 300:
-            return("b3")
-        elif pos[0] <= 307.5 and pos[1] <= 300:
-            return("c3")
-        elif pos[0] <= 410 and pos[1] <= 300:
-            return("d3")
-        elif pos[0] <= 512.5 and pos[1] <= 300:
-            return("e3")
-        elif pos[0] <= 615 and pos[1] <= 300:
-            return("f3")
-        elif pos[0] <= 717.5 and pos[1] <= 300:
-            return("g3")
-        elif pos[0] <= 820 and pos[1] <= 300:
-            return("h3")
-        elif pos[0] <= 102.5 and pos[1] <= 400:
-            return("a4")
-        elif pos[0] <= 205 and pos[1] <= 400:
-            return("b4")
-        elif pos[0] <= 307.5 and pos[1] <= 400:
-            return("c4")
-        elif pos[0] <= 410 and pos[1] <= 400:
-            return("d4")
-        elif pos[0] <= 512.5 and pos[1] <= 400:
-            return("e4")
-        elif pos[0] <= 615 and pos[1] <= 400:
-            return("f4")
-        elif pos[0] <= 717.5 and pos[1] <= 400:
-            return("g4")
-        elif pos[0] <= 820 and pos[1] <= 400:
-            return("h4")
-        elif pos[0] <= 102.5 and pos[1] <= 500:
-            return("a5")
-        elif pos[0] <= 205 and pos[1] <= 500:
-            return("b5")
-        elif pos[0] <= 307.5 and pos[1] <= 500:
-            return("c5")
-        elif pos[0] <= 410 and pos[1] <= 500:
-            return("d5")
-        elif pos[0] <= 512.5 and pos[1] <= 500:
-            return("e5")
-        elif pos[0] <= 615 and pos[1] <= 500:
-            return("f5")
-        elif pos[0] <= 717.5 and pos[1] <= 500:
-            return("g5")
-        elif pos[0] <= 820 and pos[1] <= 500:
-            return("h5")
-        elif pos[0] <= 102.5 and pos[1] <= 600:
-            return("a6")
-        elif pos[0] <= 205 and pos[1] <= 600:
-            return("b6")
-        elif pos[0] <= 307.5 and pos[1] <= 600:
-            return("c6")
-        elif pos[0] <= 410 and pos[1] <= 600:
-            return("d6")
-        elif pos[0] <= 512.5 and pos[1] <= 600:
-            return("e6")
-        elif pos[0] <= 615 and pos[1] <= 600:
-            return("f6")
-        elif pos[0] <= 717.5 and pos[1] <= 600:
-            return("g6")
-        elif pos[0] <= 820 and pos[1] <= 600:
-            return("h6")
-        elif pos[0] <= 102.5 and pos[1] <= 700:
-            return("a7")
-        elif pos[0] <= 205 and pos[1] <= 700:
-            return("b7")
-        elif pos[0] <= 307.5 and pos[1] <= 700:
-            return("c7")
-        elif pos[0] <= 410 and pos[1] <= 700:
-            return("d7")
-        elif pos[0] <= 512.5 and pos[1] <= 700:
-            return("e7")
-        elif pos[0] <= 615 and pos[1] <= 700:
-            return("f7")
-        elif pos[0] <= 717.5 and pos[1] <= 700:
-            return("g7")
-        elif pos[0] <= 820 and pos[1] <= 700:
-            return("h7")
-        elif pos[0] <= 102.5 and pos[1] <= 800:
-            return("a8")
-        elif pos[0] <= 205 and pos[1] <= 800:
-            return("b8")
-        elif pos[0] <= 307.5 and pos[1] <= 800:
-            return("c8")
-        elif pos[0] <= 410 and pos[1] <= 800:
-            return("d8")
-        elif pos[0] <= 512.5 and pos[1] <= 800:
-            return("e8")
-        elif pos[0] <= 615 and pos[1] <= 800:
-            return("f8")
-        elif pos[0] <= 717.5 and pos[1] <= 800:
-            return("g8")
-        elif pos[0] <= 820 and pos[1] <= 800:
-            return("h8")
+        elif pos[0] <= 102.5/x and pos[1] <= 200/x:
+            return "a2"
+        elif pos[0] <= 205/x and pos[1] <= 200/x:
+            return "b2"
+        elif pos[0] <= 307.5/x and pos[1] <= 200/x:
+            return "c2"
+        elif pos[0] <= 410/x and pos[1] <= 200/x:
+            return "d2"
+        elif pos[0] <= 512.5/x and pos[1] <= 200/x:
+            return "e2"
+        elif pos[0] <= 615/x and pos[1] <= 200/x:
+            return "f2"
+        elif pos[0] <= 717.5/x and pos[1] <= 200/x:
+            return "g2"
+        elif pos[0] <= 820/x and pos[1] <= 200/x:
+            return "h2"
+        elif pos[0] <= 102.5/x and pos[1] <= 300/x:
+            return "a3"
+        elif pos[0] <= 205/x and pos[1] <= 300/x:
+            return "b3"
+        elif pos[0] <= 307.5/x and pos[1] <= 300/x:
+            return "c3"
+        elif pos[0] <= 410/x and pos[1] <= 300/x:
+            return "d3"
+        elif pos[0] <= 512.5/x and pos[1] <= 300/x:
+            return "e3"
+        elif pos[0] <= 615/x and pos[1] <= 300/x:
+            return "f3"
+        elif pos[0] <= 717.5/x and pos[1] <= 300/x:
+            return "g3"
+        elif pos[0] <= 820/x and pos[1] <= 300/x:
+            return "h3"
+        elif pos[0] <= 102.5/x and pos[1] <= 400/x:
+            return "a4"
+        elif pos[0] <= 205/x and pos[1] <= 400/x:
+            return "b4"
+        elif pos[0] <= 307.5/x and pos[1] <= 400/x:
+            return "c4"
+        elif pos[0] <= 410/x and pos[1] <= 400/x:
+            return "d4"
+        elif pos[0] <= 512.5/x and pos[1] <= 400/x:
+            return "e4"
+        elif pos[0] <= 615/x and pos[1] <= 400/x:
+            return "f4"
+        elif pos[0] <= 717.5/x and pos[1] <= 400/x:
+            return "g4"
+        elif pos[0] <= 820/x and pos[1] <= 400/x:
+            return "h4"
+        elif pos[0] <= 102.5/x and pos[1] <= 500/x:
+            return "a5"
+        elif pos[0] <= 205/x and pos[1] <= 500/x:
+            return "b5"
+        elif pos[0] <= 307.5/x and pos[1] <= 500/x:
+            return "c5"
+        elif pos[0] <= 410/x and pos[1] <= 500/x:
+            return "d5"
+        elif pos[0] <= 512.5/x and pos[1] <= 500/x:
+            return "e5"
+        elif pos[0] <= 615/x and pos[1] <= 500/x:
+            return "f5"
+        elif pos[0] <= 717.5/x and pos[1] <= 500/x:
+            return "g5"
+        elif pos[0] <= 820/x and pos[1] <= 500/x:
+            return "h5"
+        elif pos[0] <= 102.5/x and pos[1] <= 600/x:
+            return "a6"
+        elif pos[0] <= 205/x and pos[1] <= 600/x:
+            return "b6"
+        elif pos[0] <= 307.5/x and pos[1] <= 600/x:
+            return "c6"
+        elif pos[0] <= 410/x and pos[1] <= 600/x:
+            return "d6"
+        elif pos[0] <= 512.5/x and pos[1] <= 600/x:
+            return "e6"
+        elif pos[0] <= 615/x and pos[1] <= 600/x:
+            return "f6"
+        elif pos[0] <= 717.5/x and pos[1] <= 600/x:
+            return "g6"
+        elif pos[0] <= 820/x and pos[1] <= 600/x:
+            return "h6"
+        elif pos[0] <= 102.5/x and pos[1] <= 700/x:
+            return "a7"
+        elif pos[0] <= 205/x and pos[1] <= 700/x:
+            return "b7"
+        elif pos[0] <= 307.5/x and pos[1] <= 700/x:
+            return "c7"
+        elif pos[0] <= 410/x and pos[1] <= 700/x:
+            return "d7"
+        elif pos[0] <= 512.5/x and pos[1] <= 700/x:
+            return "e7"
+        elif pos[0] <= 615/x and pos[1] <= 700/x:
+            return "f7"
+        elif pos[0] <= 717.5/x and pos[1] <= 700/x:
+            return "g7"
+        elif pos[0] <= 820/x and pos[1] <= 700/x:
+            return "h7"
+        elif pos[0] <= 102.5/x and pos[1] <= 800/x:
+            return "a8"
+        elif pos[0] <= 205/x and pos[1] <= 800/x:
+            return "b8"
+        elif pos[0] <= 307.5/x and pos[1] <= 800/x:
+            return "c8"
+        elif pos[0] <= 410/x and pos[1] <= 800/x:
+            return "d8"
+        elif pos[0] <= 512.5/x and pos[1] <= 800/x:
+            return "e8"
+        elif pos[0] <= 615/x and pos[1] <= 800/x:
+            return"f8"
+        elif pos[0] <= 717.5/x and pos[1] <= 800/x:
+            return "g8"
+        elif pos[0] <= 820/x and pos[1] <= 800/x:
+            return "h8"
