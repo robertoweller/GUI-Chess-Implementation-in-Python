@@ -3,6 +3,7 @@ from kivy.config import Config
 # Dando erro nessa biblioteca do kivy
 #from kivy.core.window import Window
 
+# Precisa resolver problema de peça mover quando se clica fora.
 
 def setup():
     #Set the Height and Width of the Board, tela grande 820, 800: tela média 656, 640 e piquena 410, 400.
